@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:PG_MPROTO.ViewModel"
+             xmlns:m="clr-namespace:PG_MPROTO.Model"
+             xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="PG_MPROTO.NotePage">
+    <ContentPage.BindingContext>
+        <viewModels:NoteViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+
+            <!--<ListView ItemsSource="{Binding Messages}"
+                Margin="10"
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing }"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           Orientation="Horizontal">
+                                <Image Source="{Binding UserImageUrl}"></Image>
+
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Messagetext, StringFormat='Message: {0}'}"></Label>
+                                    <Label Text="{Binding Sender, StringFormat='Sender: {0}'}"></Label>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding Messages}"/>
+            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <!--<Entry Placeholder="Please enter you name.." Text="{Binding UserName}"></Entry>
+                <Entry Placeholder="Please enter message.." Text="{Binding TextMessage}"></Entry>-->
+                <!--<dataForm:SfDataForm x:Name="dataForm" BindingContext="{Binding Source = {m:Note1}}" />-->
+                <dataForm:SfDataForm x:Name="dataForm" NotifyPropertyChanges="True" />
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Send" Command="{Binding SendMessageCommand}"></Button>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
