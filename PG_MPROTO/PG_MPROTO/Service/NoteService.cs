@@ -12,7 +12,7 @@ namespace PG_MPROTO.Service
 {
     public class NoteService
     {
-        private MobileServiceClient _mobileServiceClient = new MobileServiceClient("azure service");
+        private MobileServiceClient _mobileServiceClient = new MobileServiceClient("https://pgprotom.azurewebsites.net");
         IMobileServiceSyncTable<Message> _messageTable;
 
         public async Task Initialize()
