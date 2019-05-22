@@ -17,8 +17,8 @@ namespace PG_MPROTO
         public NotePage()
         {
             InitializeComponent();
-            BindingContext = vm = new NoteViewModel();
-            dataForm.DataObject = new NoteViewModel();
+            //BindingContext = vm = new NoteViewModel();
+           //dataForm.DataObject = new NoteViewModel();
         }
     }
 }

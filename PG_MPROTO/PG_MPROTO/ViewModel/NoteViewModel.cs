@@ -23,16 +23,16 @@ namespace PG_MPROTO.ViewModel
         private NoteService _azureDataService = new NoteService();
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public Note1 Note1 { get; set; }
+       // public Note1 Note1 { get; set; }
 
-        private Message MessageInfo;
-        public Message Meassage
-        {
-            get { return this.MessageInfo; }
-            set { this.MessageInfo = value; }
+        //private Message MessageInfo;
+        //public Message Meassage
+        //{
+        //    get { return this.MessageInfo; }
+        //    set { this.MessageInfo = value; }
 
 
-        }
+        //}
 
         public NoteViewModel()
         {

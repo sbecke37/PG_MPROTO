@@ -20,7 +20,7 @@ namespace PG_MPROTO.Service
             if (_mobileServiceClient?.SyncContext?.IsInitialized ?? false)
                 return;
 
-            const string path = "syncstore.db";
+            const string path = "syncstore11.db";
             //setup our local sqlite store and intialize our table
             var store = new MobileServiceSQLiteStore(path);
             store.DefineTable<Message>();

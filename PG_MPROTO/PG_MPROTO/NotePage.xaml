@@ -43,7 +43,7 @@
                 <!--<Entry Placeholder="Please enter you name.." Text="{Binding UserName}"></Entry>
                 <Entry Placeholder="Please enter message.." Text="{Binding TextMessage}"></Entry>-->
                 <!--<dataForm:SfDataForm x:Name="dataForm" BindingContext="{Binding Source = {m:Note1}}" />-->
-                <dataForm:SfDataForm x:Name="dataForm" NotifyPropertyChanges="True" />
+                <dataForm:SfDataForm x:Name="dataForm" NotifyPropertyChanges="True" DataObject="{Binding NoteViewModel }" />
             </StackLayout>
             <StackLayout>
                 <Button Text="Send" Command="{Binding SendMessageCommand}"></Button>
